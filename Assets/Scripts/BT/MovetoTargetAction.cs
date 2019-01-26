@@ -30,6 +30,7 @@ public class MovetoTargetAction : Action
             SetParam("walking", true);
             SetParam("set", false);
             SetQipaoParam("wenhao", false);
+            SetQipaoParam("huiluan", false);
             return TaskStatus.Success;
         }
         else
@@ -65,16 +66,19 @@ public class MovetoTargetAction : Action
         {
             case PropState.EProp.None:
                 break;
-            case PropState.EProp.Light:
-                SetQipaoParam("wenhao", true);
-                SetParam("walking",false);
-                break;
             case PropState.EProp.Shafa:
                 SetParam("set",true);
                 break;
             case PropState.EProp.Zhanyifu:
                 break;
+            case PropState.EProp.bingxiang:
+                SetQipaoParam("huiluan", true);
+                SetParam("walking", false);
+                break;
+            case PropState.EProp.Light:
             case PropState.EProp.Huaping:
+                SetQipaoParam("wenhao", true);
+                SetParam("walking", false);
                 break;
             default:
                 break;

@@ -13,5 +13,6 @@ public class PropState : MonoBehaviour
         Shafa,
         Zhanyifu,
         Huaping,
+        bingxiang,
     }
 }

@@ -12,6 +12,7 @@ public class Mama : MonoBehaviour
     public int m_InitLayer = 0;
     public int m_MaxLayer = 2;
     public MamaState mamaState = MamaState.Walking;
+    public Player m_Player;
     private BehaviorTree m_MamaBT;
     private Transform m_CurrentTarget;
     private SpriteRenderer m_MamaSR;
@@ -21,6 +22,7 @@ public class Mama : MonoBehaviour
     {
         Walking,
         EnterDoor,
+        FindPlayerNotInHisRoom,
     }
 
     private void Awake()
@@ -42,6 +44,9 @@ public class Mama : MonoBehaviour
         m_CurrentTarget = RandomTraget(m_CurrentTarget);
         if (m_CurrentTarget != null)
         {
+            SharedGameObject sgoPlayer = m_Player.gameObject;
+            m_MamaBT.SetVariable("SeePlayerObj", sgoPlayer);
+
             SharedGameObject sgo = m_CurrentTarget.gameObject;
             m_MamaBT.SetVariable("MoveTo", sgo);
             SharedFloat sf = Mathf.Sign(m_CurrentTarget.position.x - transform.position.x) * 90;
@@ -129,6 +134,17 @@ public class Mama : MonoBehaviour
             door.CloseDoor();
         }
 
+    }
+
+    public void FindPlayerNotInHisRoom()
+    {
+        LOG.Log("不在房间 游戏结束");
+        mamaState = MamaState.FindPlayerNotInHisRoom;
+    }
+
+    public void FindPlayerInHisRoom()
+    {
+        LOG.Log("在房间里，好好学习哈");
     }
 
     #endregion
