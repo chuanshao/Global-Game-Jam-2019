@@ -22,7 +22,9 @@ public class EnterDoorAction : Action
 
     public override TaskStatus OnUpdate()
     {
-        Random.InitState ((int)Time.time);
+        var currentTime = System.DateTime.Now;
+
+        Random.InitState (currentTime.TimeOfDay.Milliseconds);
         float r = Random.Range(-1, 1);
         if (r >= 0)
         {

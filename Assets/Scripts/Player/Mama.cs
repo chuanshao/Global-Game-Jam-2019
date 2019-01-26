@@ -30,10 +30,6 @@ public class Mama : MonoBehaviour
         m_MamaBT.OnBehaviorEnd += DoBTEnd;
     }
 
-    private void OnEnable()
-    {
-        
-    }
 
     private void Start()
     {
@@ -118,13 +114,22 @@ public class Mama : MonoBehaviour
     {
         mamaState = MamaState.EnterDoor;
         RandomLayer(m_InitLayer);
-        //Do something
+    }
+
+    public void ToNextDoor(GameObject doorGameObj)
+    {
         Door nextDoor = GameResMgr.Instance.m_LayerRes[m_InitLayer].m_Door;
         nextDoor.OpenDoor();
         transform.position = nextDoor.transform.position;
         mamaState = MamaState.Walking;
-    }
 
+        if (doorGameObj != null)
+        {
+            var door = doorGameObj.GetComponent<Door>();
+            door.CloseDoor();
+        }
+
+    }
 
     #endregion
 
