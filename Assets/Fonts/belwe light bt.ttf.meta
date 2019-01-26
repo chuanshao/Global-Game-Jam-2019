@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 563286ea9834f184c8d4fcd2dda04338
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Belwe Lt BT
+  fontNames:
+  - Belwe Lt BT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 318deef07ff331d4d8b27604e6db3043, type: 3}
+  - {fileID: 12800000, guid: 1149e8ad4f8ccd8498c962758732094b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
