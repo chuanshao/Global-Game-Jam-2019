@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: d4f76f4053b6296409651ee710037ff8
   - enabled: 1
+    path: Assets/Dialogue.unity
+    guid: cc83dc22bd4b3af42be38235324e44f7
+  - enabled: 1
+    path: Assets/End Screen.unity
+    guid: 8b77a77d59edfd147bf6573d31babd4b
+  - enabled: 1
     path: Assets/Scenes/GameDemoAI.unity
     guid: c0cf800021cfb954696c201381d6641f
   m_configObjects: {}

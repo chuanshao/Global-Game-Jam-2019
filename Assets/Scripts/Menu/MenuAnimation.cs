@@ -19,6 +19,7 @@ public class MenuAnimation : MonoBehaviour {
 		yield return new WaitForSeconds(Rand_Time);
 		Times_Up = true;
 		anim.SetBool("Timeup", Times_Up);
+		FindObjectOfType<AudioManager>().Play("Laser");
 		yield return new WaitForSeconds(1f);
 		Times_Up = false;
 		anim.SetBool("Timeup", Times_Up);

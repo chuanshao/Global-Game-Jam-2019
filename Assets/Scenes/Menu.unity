@@ -142,8 +142,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Background 1
+    clip: {fileID: 8300000, guid: 919dbdc17c77dd34fae0c92ce5c345c7, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
   - name: Keyboard
     clip: {fileID: 8300000, guid: ff8327ae2e690624f9ea43501283dc3e, type: 3}
+    Volume: 1
+    Pitch: 1
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: 42e4fd14a59225143aab1000045534b1, type: 3}
     Volume: 1
     Pitch: 1
     source: {fileID: 0}
@@ -352,7 +362,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &844237766
 AudioSource:
   m_ObjectHideFlags: 0
