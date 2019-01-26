@@ -11,11 +11,13 @@ public class MenuPointer : MonoBehaviour {
 		{
 			transform.position = new Vector2(transform.position.x, transform.position.y - 1.5f);
 			OnFirstOption = false;
+			FindObjectOfType<AudioManager>().Play("Keyboard");
 		}
 		else if(Input.GetKeyDown(KeyCode.W)&&transform.position.y <= -2.35f)
 		{
 			transform.position = new Vector2(transform.position.x, transform.position.y + 1.5f);
 			OnFirstOption = true;
+			FindObjectOfType<AudioManager>().Play("Keyboard");
 		}
 
 		if (OnFirstOption)

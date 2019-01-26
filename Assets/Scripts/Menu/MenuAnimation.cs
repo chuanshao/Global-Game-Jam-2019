@@ -10,6 +10,7 @@ public class MenuAnimation : MonoBehaviour {
     {
 		anim = GetComponent<Animator>();
 		StartCoroutine(Play_Animation());
+		FindObjectOfType<AudioManager>().Play("Background 1");
     }
 
 	IEnumerator Play_Animation()
