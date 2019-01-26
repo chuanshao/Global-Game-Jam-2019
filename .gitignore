@@ -1,0 +1,13 @@
+Library/*
+[Tt]emp/
+[Oo]bj/
+Bin/
+Ios/
+Apk/
+*.sln
+*.csproj
+*.sln
+*.userprefs
+*.unityproj
+*.DS_Store
+*.swp
