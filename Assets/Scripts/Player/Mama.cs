@@ -63,6 +63,7 @@ public class Mama : MonoBehaviour
         if (args != null && args.Length > 0)
         {
             m_MamaSpeed += (float)args[0];
+            ChangedMamaSpeed();
         }
     }
 

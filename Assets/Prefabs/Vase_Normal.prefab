@@ -190,6 +190,7 @@ MonoBehaviour:
   sprite_Normal: {fileID: 21300000, guid: f2c3589acd62dec44aedfd6e6cbf3f69, type: 3}
   sprite_Destroy: {fileID: 21300000, guid: 81e9be42ebbf48746bc8205ae446d002, type: 3}
   m_BtnController: {fileID: 917634360410726153}
+  m_AddSpeedToMama: 1
 --- !u!61 &7425232305946802049
 BoxCollider2D:
   m_ObjectHideFlags: 0
