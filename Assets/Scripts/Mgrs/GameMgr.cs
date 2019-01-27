@@ -14,7 +14,7 @@ public class GameMgr :MonoSingleton<GameMgr>{
     /// </summary>
     public void GameOverByFindPlayerIsNotInRoom()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
-  
+
 }

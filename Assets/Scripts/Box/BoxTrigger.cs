@@ -23,6 +23,14 @@ public class BoxTrigger : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			In = false;
+		}
+	}
+
 	void Update()
 	{
 		if(In)
@@ -35,6 +43,7 @@ public class BoxTrigger : MonoBehaviour {
 				{
 					box.PutOn();
 					rend.enabled = false;
+					In = true;
 				}
 				else
 				{
