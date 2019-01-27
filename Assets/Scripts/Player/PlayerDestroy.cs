@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SmileGame;
 
 public class PlayerDestroy : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerDestroy : MonoBehaviour
     public Sprite sprite_Destroy;
 
     public GameObject m_BtnController;
+    public float m_AddSpeedToMama = 0.2f;
 
     private EState currentState = EState.Normal;
     private SpriteRenderer m_SR;
@@ -86,6 +88,7 @@ public class PlayerDestroy : MonoBehaviour
         ChangedState(EState.Destroy);
         m_BtnController.SetActive(false);
         m_CanDestroy = false;
+        EventHelper.Send(Mama.Event_Destory_Obj, m_AddSpeedToMama);
     }
 
 

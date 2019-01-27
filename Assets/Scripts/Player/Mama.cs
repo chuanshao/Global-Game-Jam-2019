@@ -11,12 +11,14 @@ public class Mama : MonoBehaviour
     /// </summary>
     public int m_InitLayer = 0;
     public int m_MaxLayer = 2;
+    public float m_MamaSpeed = 2;
     public MamaState mamaState = MamaState.Walking;
     public Player m_Player;
     private BehaviorTree m_MamaBT;
     private Transform m_CurrentTarget;
     private SpriteRenderer m_MamaSR;
 
+    public static string Event_Destory_Obj = "Event_Destory_Obj";
 
     public enum MamaState
     {
@@ -36,6 +38,38 @@ public class Mama : MonoBehaviour
     private void Start()
     {
         RandomMovetoTarget();
+        ChangedMamaSpeed();
+    }
+
+    private void OnEnable()
+    {
+        EventHelper.Listen(Event_Destory_Obj, AddSpeed);
+    }
+
+    private void OnDisable()
+    {
+        EventHelper.Remove(Event_Destory_Obj, AddSpeed);
+    }
+
+
+
+    private void Update()
+    {
+
+    }
+
+    private void AddSpeed(object[] args)
+    {
+        if (args != null && args.Length > 0)
+        {
+            m_MamaSpeed += (float)args[0];
+        }
+    }
+
+    public void ChangedMamaSpeed()
+    {
+        SharedFloat sf = m_MamaSpeed;
+        m_MamaBT.SetVariable("Speed", sf);
     }
 
 

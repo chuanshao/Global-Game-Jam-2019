@@ -777,6 +777,11 @@ PrefabInstance:
       propertyPath: m_Player
       value: 
       objectReference: {fileID: 2004338783935390564}
+    - target: {fileID: 5534907668910877304, guid: 488c309faab49f946a1e86969aebf98d,
+        type: 3}
+      propertyPath: m_MamaSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5864415698882999794, guid: 488c309faab49f946a1e86969aebf98d,
         type: 3}
       propertyPath: m_Layer
@@ -1936,6 +1941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004338783935390564, guid: 0432871387138d445a8e2d80dee052c4,
+        type: 3}
+      propertyPath: m_Speed
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0432871387138d445a8e2d80dee052c4, type: 3}
