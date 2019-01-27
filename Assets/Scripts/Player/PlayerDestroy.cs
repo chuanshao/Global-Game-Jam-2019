@@ -11,6 +11,8 @@ public class PlayerDestroy : MonoBehaviour
     public GameObject m_BtnController;
     public float m_AddSpeedToMama = 0.2f;
 
+    public bool m_HasGameMachine; //是否有游戏机
+
     private EState currentState = EState.Normal;
     private SpriteRenderer m_SR;
     private bool m_CanDestroy;
@@ -89,7 +91,12 @@ public class PlayerDestroy : MonoBehaviour
         m_BtnController.SetActive(false);
         m_CanDestroy = false;
         EventHelper.Send(Mama.Event_Destory_Obj, m_AddSpeedToMama);
+        if (m_HasGameMachine)
+        {
+            GameMgr.Instance.GenerationGameMachine(this.transform);
+        }
     }
+
 
 
 }

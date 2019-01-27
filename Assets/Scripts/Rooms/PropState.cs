@@ -14,5 +14,7 @@ public class PropState : MonoBehaviour
         Zhanyifu,
         Huaping,
         bingxiang,
+        jingzi,
+        yigui,
     }
 }

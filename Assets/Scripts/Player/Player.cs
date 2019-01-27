@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
     public PlayerPropState PlayerCurrenPropState
     {
         get { return m_PlayerPropState; }
+        set { m_PlayerPropState = value; }
     }
 
     #region unity api 
@@ -64,6 +65,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerCurrenPropState == PlayerPropState.InGuizi) return;
+
         float horizontal = GameInput.Horizontal; //控制左右移动 
         float vertical = GameInput.Vertical;//控制下蹲和进入门
 

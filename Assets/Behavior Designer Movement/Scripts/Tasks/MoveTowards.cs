@@ -30,7 +30,6 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                 return TaskStatus.Success;
             }
             // We haven't reached the target yet so keep moving towards it
-            Debug.Log("Speed : " + speed.Value);
             transform.position = Vector3.MoveTowards(transform.position, position, speed.Value * Time.deltaTime);
             if (lookAtTarget.Value && (position - transform.position).sqrMagnitude > 0.01f) {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(position - transform.position), maxLookAtRotationDelta.Value);

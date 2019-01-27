@@ -216,3 +216,5 @@ MonoBehaviour:
   sprite_Normal: {fileID: 21300000, guid: e1be73bb1363264488e220bf73c231bd, type: 3}
   sprite_Destroy: {fileID: 21300000, guid: 9fb54edbe93cfb141a9e1132b8ce046e, type: 3}
   m_BtnController: {fileID: 197715251122827672}
+  m_AddSpeedToMama: 1
+  m_HasGameMachine: 0

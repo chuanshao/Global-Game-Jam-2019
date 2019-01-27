@@ -49,7 +49,7 @@ public class MovetoTargetAction : Action
             case PropState.EProp.Light:
                 return 1;
             case PropState.EProp.Shafa:
-                return 2;
+                return 5;
             case PropState.EProp.Zhanyifu:
                 return 1;
             case PropState.EProp.Huaping:
@@ -71,6 +71,8 @@ public class MovetoTargetAction : Action
                 break;
             case PropState.EProp.Zhanyifu:
                 break;
+            case PropState.EProp.yigui:
+            case PropState.EProp.jingzi:
             case PropState.EProp.bingxiang:
                 SetQipaoParam("huiluan", true);
                 SetParam("walking", false);

@@ -76,6 +76,7 @@ public class Mama : MonoBehaviour
 
     private void RandomMovetoTarget()
     {
+        if (GameResMgr.IsSingletonDestory) return;
         m_CurrentTarget = RandomTraget(m_CurrentTarget);
         if (m_CurrentTarget != null)
         {
