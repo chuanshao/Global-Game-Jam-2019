@@ -21,7 +21,7 @@ public class PlayerBox : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.DownArrow))
+		if (Input.GetKeyDown(KeyCode.S))
 		{
 			Hidden = !Hidden;
 

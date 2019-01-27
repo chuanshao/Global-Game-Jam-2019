@@ -140,6 +140,7 @@ public class Mama : MonoBehaviour
     {
         LOG.Log("不在房间 游戏结束");
         mamaState = MamaState.FindPlayerNotInHisRoom;
+        GameMgr.Instance.GameOverByFindPlayerIsNotInRoom();
     }
 
     public void FindPlayerInHisRoom()

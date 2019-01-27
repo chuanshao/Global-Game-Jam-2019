@@ -5,7 +5,7 @@ public class EndScreen : MonoBehaviour {
 
     public void Play_Again()
 	{
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene(0);
 	}
 
 	public void Quit()

@@ -2733,7 +2733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3806ed0db9ff62449adfdc4a861b8abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DontDestroyOnLoad: 1
+  m_DontDestroyOnLoad: 0
   m_LayerRes:
   - m_LayerIndex: 0
     m_Door: {fileID: 383744437}

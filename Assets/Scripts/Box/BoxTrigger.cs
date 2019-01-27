@@ -27,7 +27,7 @@ public class BoxTrigger : MonoBehaviour {
 	{
 		if(In)
 		{
-			if (Input.GetKeyDown(KeyCode.Alpha1))
+			if (Input.GetKeyDown(KeyCode.E))
 			{
 				PickedUp = !PickedUp;
 
