@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class GameMgr :MonoSingleton<GameMgr>{
 
+    public List<PlayerDestroy> m_HuluePlayerDestroys;
+
     public GameObject m_GameMachine;
 
     /// <summary>
@@ -42,6 +44,14 @@ public class GameMgr :MonoSingleton<GameMgr>{
     {
         PlayerDestroy[] pds = FindObjectsOfType<PlayerDestroy>();
         int index = Random.Range(0, pds.Length);
+
+        if (m_HuluePlayerDestroys.Contains(pds[index]))
+        {
+            LOG.Log("  paichu ");
+            FindWhereGameBodyParent();
+            return;
+        }
+
         pds[index].m_HasGameMachine = true;
     }
 

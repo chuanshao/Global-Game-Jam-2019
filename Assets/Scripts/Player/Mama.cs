@@ -18,6 +18,8 @@ public class Mama : MonoBehaviour
     private Transform m_CurrentTarget;
     private SpriteRenderer m_MamaSR;
 
+    public wall m_Wall;
+
     public static string Event_Destory_Obj = "Event_Destory_Obj";
 
     public enum MamaState
@@ -52,11 +54,25 @@ public class Mama : MonoBehaviour
     }
 
 
-
     private void Update()
     {
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ("Wall".Equals(collision.gameObject.tag))
+        {
+            m_Wall = collision.gameObject.GetComponent<wall>();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+    }
+
+
 
     private void AddSpeed(object[] args)
     {
@@ -64,6 +80,7 @@ public class Mama : MonoBehaviour
         {
             m_MamaSpeed += (float)args[0];
             ChangedMamaSpeed();
+            m_Wall.AnimFF();
         }
     }
 

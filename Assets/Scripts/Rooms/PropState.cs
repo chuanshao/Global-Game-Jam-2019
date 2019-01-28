@@ -16,5 +16,6 @@ public class PropState : MonoBehaviour
         bingxiang,
         jingzi,
         yigui,
+        chuang,
     }
 }

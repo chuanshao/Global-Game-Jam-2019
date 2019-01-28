@@ -26,4 +26,17 @@ public class wall : MonoBehaviour
             anim.SetBool("Fade in", false);
         }
     }
+
+    public void AnimFF()
+    {
+        StartCoroutine(Play());
+    }
+
+    IEnumerator  Play()
+    {
+        anim.SetBool("Fade in", true);
+        yield return new WaitForSeconds(1);
+        anim.SetBool("Fade in", false);
+    }
+
 }
